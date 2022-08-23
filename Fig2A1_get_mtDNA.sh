@@ -32,7 +32,6 @@
 #######
 
 
-
 export ref=KF690638_Eve_mt_complete_genome.fasta
 ## a very important thing to remember about this reference:
 ## 16S rRNA = rrnL is probably reverse complement relative to what it should be
@@ -82,5 +81,12 @@ export fq1=/media/tertiary/RNAseq_reads_SRA/Eulimnogammarus_vittatus/SRR3467061_
 export fq2=/media/tertiary/RNAseq_reads_SRA/Eulimnogammarus_vittatus/SRR3467061_2.fastq.gz
 ./bowtie_and_mitofinder.sh
 
+## another funny thing
+## TODO check why the protein sequences (eg ATP8) differ in MitoFinder output and the in the RefSeq reference!
+## they both used codon table #5 but ATG=V in MitoFinder and ATG=M in NCBI. Why?
+## there's something about AA=V start=M that I don't get:
+## https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi?mode=c#SG5
 
+## just for information
+## in some cases (EveBK_B24_1 + megahit) there is 1 (!) contig with 15 (!) genes
 
